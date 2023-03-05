@@ -1,6 +1,7 @@
 <?php
 
-print_r($_COOKIE);
+
+
 
 ?>
 
@@ -14,6 +15,6 @@ print_r($_COOKIE);
     <title>Document</title>
 </head>
 <body>
-    <h1>HELLO</h1>
+    
 </body>
 </html>

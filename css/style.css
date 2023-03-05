@@ -1,0 +1,21 @@
+.headerAdmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textTitle{
+    color:#F27B39;
+}
+
+.buttonOut {
+
+    color: black;
+    position: relative;
+    left: 31%;
+}
+
+.mainContainerAdmin {
+    display: flex;
+    justify-content: space-around;
+}
