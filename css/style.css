@@ -19,3 +19,23 @@
     display: flex;
     justify-content: space-around;
 }
+.addUser{
+    display: flex;
+}
+.homeworkData {
+    display: flex;
+    justify-content: space-around;
+}
+.menuTeacher {
+    display: flex;
+    justify-content: center;
+}
+.menuTeacher a h2{
+    margin: 0 25px;
+}
+
+a.closeMark {
+    margin-left: 65%;
+    text-decoration: none;
+    color: black;
+}
