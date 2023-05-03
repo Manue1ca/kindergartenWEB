@@ -29,18 +29,22 @@ $reqData = $req->fetch_all();
         
     </div>
     <div class="menuTeacher">
-            <a href="TeacherQuest.php"><h2>Просмотр задания</h2></a>
+            <!-- <a href="TeacherQuest.php"><h2>Просмотр задания</h2></a> -->
             <a href="TeacherAddQuest.php"><h2>Добавить задание</h2></a>
             <a href="TeacherMarks.php"><h2>Журнал оценок</h2></a>
     </div>
     <div class="mainContainerAdmin">
         
         <div class="infoTeacher">
+            <div class="contInfo">
+            <div>
             <div class="infoGroup">Группа:<?php echo $info['nameGroup']?></div>
             <div class="infoName">Преподователь:<?php echo $info['surname']." ".$info['name']." ".$info['middleName']?></div>
-        </div>
-        <div class="infoExit">
-        <a class="buttonOut" href="scripts/php/exitAuth.php">Выход</a>
+            </div>
+                <div class="infoExit">
+                <a class="" href="scripts/php/exitAuth.php">Выход</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="mainContainerAdmin">
@@ -48,6 +52,7 @@ $reqData = $req->fetch_all();
         
         <div class="homeworkData">
             <div class="homeworkTitleHead">Задание</div>
+            <div class="homeworkDateHead">Дата</div>
             <div class="homeworkComplHead">Выполнили</div>
         </div>
         <?php 
@@ -64,13 +69,24 @@ $reqData = $req->fetch_all();
                     $dataCompl = $compl->fetch_all();
                     // print_r($dataCompl);
                     foreach($dataCompl as $compl){
+                        if($compl[8] == 2){
                         ?>
                         <div class="homeComplInner">
-                            <?php  echo $compl[13].' '.$compl[14]. ' '. 'оценка:' . $compl[8]; ?>
+                            <?php  echo $compl[13].' '.$compl[14]. ' '. 'оценка: Зачтено'?>
                             <a href="chechHomework.php?userid=<?php echo $compl[6]?>&homeworkid=<?php echo $compl[7] ?>">Проверить задание</a>
                         </div>
                        
                         <?php
+                        }
+                        else{
+                            ?>
+
+                        <div class="homeComplInner">
+                            <?php  echo $compl[13].' '.$compl[14]. ' '. 'оценка: Не зачтено'?>
+                            <a href="chechHomework.php?userid=<?php echo $compl[6]?>&homeworkid=<?php echo $compl[7] ?>">Проверить задание</a>
+                        </div>
+                            <?php
+                        }
                     }
                     
                 ?>

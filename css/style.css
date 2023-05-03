@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
 .headerAdmin {
     display: flex;
     justify-content: center;
@@ -12,12 +14,12 @@
 
     color: black;
     position: relative;
-    left: 31%;
+    left: 29%;
 }
 
 .mainContainerAdmin {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .addUser{
     display: flex;
@@ -32,10 +34,157 @@
 }
 .menuTeacher a h2{
     margin: 0 25px;
+    font-family: 'Inika';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+text-align: center;
+color: #000000;
+}
+.menuTeacher a{
+    color: #000000;
 }
 
 a.closeMark {
-    margin-left: 65%;
+    position: relative;
     text-decoration: none;
     color: black;
+    left: 110px;
+    color: #F27B39;
+}
+
+.infoTeacher {
+    margin: 15px 0;
+}
+
+.contInfo {
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(242, 135, 57, 0.22);
+    border-radius: 8px;
+}
+
+.contInfo > div >div {
+    font-family: 'Inika';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+
+color: #000000;
+}
+.contInfo > div {
+    margin: 0 70px;
+}
+.infoExit > a{
+    font-family: 'Inika';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+
+color: #000000;
+}
+
+.homeworkData {
+    background: rgba(242, 135, 57, 0.22);
+    border: 1px solid black;
+}
+
+.homeworkTitleHead,.homeworkDateHead,.homeworkComplHead {
+    margin: 15px;
+    font-size: 28px;
+}
+
+.homeworkTitle {
+    font-size: 28px;
+    padding: 50px;
+    width: 190px;
+    display: flex;
+    justify-content: center;
+}
+
+.homeworkDate {
+    font-size: 28px;
+    padding: 60px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.homeComplInner {
+    border-bottom: 1px solid;
+}
+.homeworkCompl {
+    width: 360px;
+}
+
+.infoStudent, .infoWork, .infoHomework {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(242, 135, 57, 0.22);
+}
+
+.infoStudent> h3 > a, .infoWork> h3 > a, .infoHomework > h3 > a {
+    color: #000000;
+}
+
+.buttonClass {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 39px;
+    background: rgba(242, 135, 57, 0.42);
+    border-radius: 30px;
+    text-align: center;
+    color: #000000;
+    padding: 15px 35px;
+}
+
+
+.listStudents {
+    border: 1pxsolid;
+    margin: 0px 90px;
+}
+
+.nameText {
+   font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.list {
+    margin: 40px 0px;
+}
+
+
+.allListHomeworks, .compliteListHomeworks {
+    margin: 15px;
+}
+
+.homework {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid;
+    height: 100px;
+    width: 345px;
+    color: #000000;
+}
+
+.homework > p >a{
+    color: #000000;
 }

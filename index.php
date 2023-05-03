@@ -12,11 +12,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
     <div class="mainContainer">
         <div class="mainTitle"><h1>Добро пожаловать!</h1></div>
-        <div class="mainSubText"><h3>Пожалуйста авторизуйтесь в системе с помошью вашего логина и пароля</h3></div>
+        <div class="mainSubText"><h3>Пожалуйста авторизуйтесь в системе с помошью вашего <br>логина и пароля</h3></div>
         <div class="authForm">
             <form action="scripts/php/auth.php" method="post">
                 <div class="formInputArea">
@@ -26,7 +27,7 @@
                     <input type="text" name="password" id="password">
                 </div>
                 <div class="formButtonArea">
-                    <button>Войти</button>
+                    <button id="submit">Войти</button>
                 </div>
             </form>
         </div>

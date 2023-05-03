@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Добавить поспитателя</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
     <div class="headerAdmin">
@@ -46,7 +47,7 @@
             <input type="text" name="rePasword">
        </div>
        </div>
-       <button>Зарегистрировать</button>
+       <button id="submit" style="margin: 30px auto;    padding: 5px;">Зарегистрировать</button>
     </form>
     </div>
 </body>

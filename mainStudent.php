@@ -23,6 +23,7 @@ $reqData = $req->fetch_all();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Линый кабинет ученика</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/auth.css"> -->
 </head>
 <body>
 <div class="headerAdmin">
@@ -30,13 +31,15 @@ $reqData = $req->fetch_all();
     </div>
     <div class="mainContainerAdmin">
         
-        <div class="infoTeacher">
+    <div class="contInfo">
+            <div>
             <div class="infoGroup">Группа:<?php echo $info['nameGroup']?></div>
-            <div class="infoName">Ученик:<?php echo $info['surname']." ".$info['name']?></div>
-        </div>
-        <div class="infoExit">
-        <a class="buttonOut" href="scripts/php/exitAuth.php">Выход</a>
-        </div>
+            <div class="infoName">Преподователь:<?php echo $info['surname']." ".$info['name']." ".$info['middleName']?></div>
+            </div>
+                <div class="infoExit">
+                <a class="" href="scripts/php/exitAuth.php">Выход</a>
+                </div>
+            </div>
     </div>
     <div class="mainContainerAdmin">
         <div class="allListHomeworks">
@@ -48,7 +51,7 @@ $reqData = $req->fetch_all();
         foreach($resultGetHome as $res){
             ?>
             <div class="homework">
-                <a href="lockHomework.php?idwork=<?php echo $res[0]?>"><?php  echo $res[2]?></a>
+                <p><a href="lockHomework.php?idwork=<?php echo $res[0]?>"><?php  echo $res[2]?></a></p>
             </div>
            
             <?php
@@ -68,11 +71,15 @@ $reqData = $req->fetch_all();
                 <?php
                 if($resComl[2] == 0){
                     ?>
-                    <p><?php  echo $resComl[16]. ' '. 'Задание провераяется'?></p>
+                    <p><?php  echo $resComl[16]. ': '. 'Задание проверяется'?></p>
                     <?php
-                }else{
+                }elseif($resComl[2] == 2){
                     ?>
-                    <p><?php  echo $resComl[16]. ' '. 'Оценка:'. $resComl[2]?></p>
+                    <p><?php  echo $resComl[16]. ': '. 'Задание зачтено'?></p>
+                    <?php
+                }elseif($resComl[2] == 1){
+                    ?>
+                    <p><?php  echo $resComl[16]. ': '. 'Задание незачтено'?></p>
                     <?php
                 }
                 ?>

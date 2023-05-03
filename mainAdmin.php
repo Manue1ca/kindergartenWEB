@@ -5,11 +5,10 @@
 require_once 'scripts/php/bd.php';
 $teacher = $mysqli->query("SELECT * FROM `users` WHERE `type_idtype`= '2'");
 $teacherResult= $teacher->fetch_all();
-print_r($teacherResult);
 
 $students = $mysqli->query("SELECT * FROM `users` WHERE `type_idtype`= '3'");
 $studentsResult= $students->fetch_all();
-print_r($studentsResult)
+
 ?>
 
 
@@ -21,6 +20,7 @@ print_r($studentsResult)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный кабинет администратора</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
     <div class="headerAdmin">
@@ -29,21 +29,22 @@ print_r($studentsResult)
     </div>
     <div class="mainContainerAdmin">
         <div class="listStudents">
+            <h2>Список учащихся</h2>
             <div class="list">
             <?php
                     foreach ($studentsResult as $item){
                         ?>
                             <div class="nameText"><?php echo $item['3'].$item['4']?></div>
-                            <div class="group">Группа</div>
                         <?php
                     }
                 ?>
             </div>
-            <div class="addUser">
-              <a href="addStudent.php">Добавить учащегося</a>  
+            <div>
+              <a class="buttonClass" href="addStudent.php">Добавить учащегося</a>  
             </div>
         </div>
         <div class="listTeacher">
+        <h2>Список преподавателей</h2>
             <div class="list">
                 <?php
                     foreach ($teacherResult as $item){
@@ -53,8 +54,8 @@ print_r($studentsResult)
                     }
                 ?>
             </div>
-            <div class="addUser">
-                <a href="addTeacher.php">Добавить преподавтеля</a>
+            <div >
+                <a class="buttonClass" href="addTeacher.php">Добавить преподавтеля</a>
             </div>
 
         </div>

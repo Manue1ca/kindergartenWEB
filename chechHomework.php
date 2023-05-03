@@ -8,7 +8,6 @@ require_once 'scripts/php/bd.php';
 
 $findWork = $mysqli->query("SELECT * FROM `users_has_homework` WHERE `users_has_homework`.`users_idusers` = $idStud AND `users_has_homework`.`homework_idhomework` = $idHomeWork");
 $workResult = $findWork->fetch_assoc();
-print_r($workResult);
 
 $findStudent = $mysqli->query("SELECT * FROM `users` JOIN `group` ON `users`.`group_idgroup` = `group`.`idgroup` WHERE `idusers` = $idStud");
 $student = $findStudent->fetch_assoc();
@@ -50,8 +49,14 @@ $resHomework = $findHomework->fetch_assoc();
             <form action="scripts/php/addMark.php" method="post">
             <input type="text" hidden value="<?php echo $idStud?>" name="idStud">
             <input type="text" hidden value="<?php echo $idHomeWork?>" name="idWork">
-            <h2>Оценка студента: <input type="number" name="mark" id="" value="<?php echo $workResult['usersCompliteHomework'] ?>"></h2>
-            <button>Поставить оценку</button>
+            <h2>Оценка студента: 
+                <!-- <input type="number" name="mark" id="" value="<?php echo $workResult['usersCompliteHomework'] ?>"> -->
+                <select name="mark">
+                    <option value="2">Зачтено</option>
+                    <option value="1">Не зачтено</option>
+                </select>
+            </h2>
+            <button class="buttonClass">Поставить оценку</button>
             </form>
         </div>
 

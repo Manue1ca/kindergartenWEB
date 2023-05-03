@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+body{
+    background-image: url("../img/back.png");
+    background-size: cover;
+}
+
+.mainTitle {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    /* line-height: 63px; */
+    text-align: center;
+    color: #F28739;
+    margin-right: 15%;
+}
+.mainSubText {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    margin-right: 15%;
+}
+.formInputArea {
+    width: 642px;
+    padding: 50px;
+    background: rgba(242, 135, 57, 0.22);
+    border-radius: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 15% 0 20%;
+}
+
+p.formText {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    color: #000000;
+    margin: 7px 0;
+}
+
+.formInputArea > input {
+    background: rgba(242, 135, 57, 0.42);
+    border-radius: 30px;
+    width: 100%;
+    height: 30px;
+}
+
+#submit{
+    
+        margin: 15px 15% 0 25%;
+        display: flex;
+        width: 39%;
+        background: rgba(242, 135, 57, 0.42);
+        border-radius: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+}
+
+
+
+
+.addUser {
+    background: rgba(242, 135, 57, 0.22);
+    border-radius: 34px;
+    padding: 25px;
+}
+
+.addUser > div > p {
+    margin: 5px 0;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    /* text-align: center; */
+}
+
+.addUser > div > input{
+    
+background: rgba(242, 135, 57, 0.42);
+border-radius: 30px;
+width: 95%;
+    font-size: 20px;
+}
+
+.addUser > div >select {
+    background: rgba(242, 135, 57, 0.42);
+    border-radius: 30px;
+    width: 100%;
+    font-size: 20px;
+}
+.oneHalfForm {
+    margin: 0px 45px;
+}
