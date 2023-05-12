@@ -188,3 +188,32 @@ color: #000000;
 .homework > p >a{
     color: #000000;
 }
+
+a.removeItem {
+    position: relative;
+    /* left: 50%; */
+    top: -85%;
+}
+
+.aboutHomework {
+    background: rgba(242, 135, 57, 0.22);
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutHomework > form > input {
+    font-size: 20px;
+}
+
+.aboutHomework > form > button {
+    background: rgba(242, 135, 57, 0.42);
+border-radius: 30px;
+font-size: 35px;
+padding: 15px 30px;
+}
+
+a > h2 {
+    color: black;
+}

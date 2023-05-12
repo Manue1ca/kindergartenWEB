@@ -34,7 +34,7 @@ $resHomework = $findHomework->fetch_assoc();
     </div>
         
         <div class="infoStudent">
-            <h2>Работа студента: <?php echo $student['surname'].' '.$student['name']?></h2>
+            <h2>Работа учащегося: <?php echo $student['surname'].' '.$student['name']?></h2>
             <h2>Группы: <?php echo $student['nameGroup']?></h2>
         </div>
         <div class="infoWork">
@@ -49,7 +49,7 @@ $resHomework = $findHomework->fetch_assoc();
             <form action="scripts/php/addMark.php" method="post">
             <input type="text" hidden value="<?php echo $idStud?>" name="idStud">
             <input type="text" hidden value="<?php echo $idHomeWork?>" name="idWork">
-            <h2>Оценка студента: 
+            <h2>Оценка учащегося: 
                 <!-- <input type="number" name="mark" id="" value="<?php echo $workResult['usersCompliteHomework'] ?>"> -->
                 <select name="mark">
                     <option value="2">Зачтено</option>

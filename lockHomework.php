@@ -23,7 +23,7 @@ $sqlRes = $sql->fetch_assoc();
         <div class="aboutHomework">
         <h1>Задание:<?php echo $sqlRes['titleHomework']?>     <a class="closeMark" href="mainStudent.php">X</a></h1>
         <h2>Описание выполнения: <?php echo $sqlRes['description']?></h2>
-        <a href="<?php echo $sqlRes['file']?>">Файл преподавателя</a>
+        <a href="<?php echo $sqlRes['file']?>"><h2>Файл преподавателя</h2></a>
         </br>
         <?php 
 
@@ -35,7 +35,7 @@ $sqlRes = $sql->fetch_assoc();
         else{
             ?>
             <form enctype="multipart/form-data" action="doneHomework/addQuest.php" method="post">
-            <p>Прикрепить выполненное задание:</p>
+            <h2>Прикрепить выполненное задание:</h2>
             <input type="text" name="idWork" value="<?php echo $idWork ?>" hidden>
             <input name="userfile" type="file" />
             <p></p>
